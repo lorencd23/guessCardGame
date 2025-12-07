@@ -1,0 +1,15 @@
+<h1>🧠 Juego de Memoria</h1>
+
+<div class="stats">
+  <span [style.color]="timeLeft() <= 5 ? 'red' : 'black'">
+    Tiempo: {{ timeLeft() }}
+  </span>
+  <button (click)="startGame()">Empezar</button>
+  <button (click)="startGame()">Reiniciar</button>
+</div>
+
+<div class="board">
+  @for (card of cards(); track card.id) {
+    <app-card [card]="card" (flip)="onCardFlip($event)"></app-card>
+  }
+</div>
