@@ -1,0 +1,14 @@
+<h2>Nivel {{ gameState.currentLevel() + 1 }}</h2>
+
+<div class="stats">
+  <span>⏱️ Tiempo: {{ timeLeft() }}s</span>
+</div>
+
+<div class="board">
+  @for (card of cards(); track card.id) {
+    <app-card
+      [card]="card"
+      (flip)="onCardFlip(card)">
+    </app-card>
+  }
+</div>

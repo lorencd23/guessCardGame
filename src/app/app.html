@@ -1,15 +1,34 @@
-<h1>🧠 Juego de Memoria</h1>
+@if(nav.screen() === 'menu'){
+  <div class="index">
+    <h1>🧠 Juego de Memoria</h1>
 
-<div class="stats">
-  <span [style.color]="timeLeft() <= 5 ? 'red' : 'black'">
-    Tiempo: {{ timeLeft() }}
-  </span>
-  <button (click)="startGame()">Empezar</button>
-  <button (click)="startGame()">Reiniciar</button>
-</div>
+    <div class="stats">
+      <button (click)="openLevelSelector()">Play</button>
+      <button (click)="openOptions()">Options</button>
+      <button (click)="openPrivacy()">Privacy&Policies</button>
+    </div>
+  </div>
+}
 
-<div class="board">
-  @for (card of cards(); track card.id) {
-    <app-card [card]="card" (flip)="onCardFlip($event)"></app-card>
-  }
-</div>
+@if(nav.screen() !== 'menu'){
+  <div>
+    <button (click)="back()">⬅️ Back</button>
+  </div>
+}
+
+@if(nav.screen() === 'levels'){
+  <app-level-selector></app-level-selector>
+}
+
+@if(nav.screen() === 'game'){
+  console.log(nav.screen());
+  <app-start></app-start>
+}
+
+@if(nav.screen() === 'options'){
+  <app-options></app-options>
+}
+
+@if(nav.screen() === 'privacy'){
+  <app-privacy></app-privacy>
+}

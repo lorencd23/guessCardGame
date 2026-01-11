@@ -1,0 +1,10 @@
+<h2>Niveles</h2>
+<div class="levels">
+    @for (level of gameState.levels; track level.id; let i = $index) {
+        <button
+            [disabled]="i > gameState.maxUnlockedLevel()"
+            (click)="select(i)">
+            Nivel {{ level.id }}
+        </button>
+    }
+</div>
