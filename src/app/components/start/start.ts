@@ -34,7 +34,6 @@ export class StartComponent {
 
     this.cards.set(deck);
     this.timeLeft.set(level.time);
-    //this.flippedCards.set([]);
     this.startTimer();
   }
   
@@ -50,7 +49,6 @@ export class StartComponent {
       }else{
         clearInterval(this.timer);
         this.timerRunning.set(false);
-        //this.stopTimer();
         alert("¡Fracaso!");
       }
     }, 1000)
@@ -95,15 +93,5 @@ export class StartComponent {
       alert("¡Nivel completado!");
     }
   }
-
-  
-
-
-
-  // stopTimer(){
-  //   clearInterval(this.timer);
-  //   this.timerRunning.set(false);
-  // }
-
 
 }

@@ -1,0 +1,36 @@
+h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.levels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.levelButton {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 150px;
+}
+.levelButton:hover {
+    background: #1565c0;
+}
+
+.locked {
+    background: #213142;
+    cursor: not-allowed;
+}
+.locked:hover {
+    background: #213142;
+}
+
+.currentLevel{
+    background: #40b830;
+}
