@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, effect } from '@angular/core';
 import { Card } from '../../models/card.model';
 import { CardComponent } from '../card/card';
 import { GameStateService } from '../../services/game-state-service';
+import { AppNavigationService } from '../../services/app-navigation-service';
 
 @Component({
   selector: 'app-start',
@@ -17,11 +18,17 @@ export class StartComponent {
   
   private timer: any;
 
-  constructor(public gameState: GameStateService) {
-    this.startGame();
+  constructor(public gameState: GameStateService, public nav: AppNavigationService) {
+    effect(() => {
+      this.gameState.currentLevel();
+      this.gameState.gameVersion();
+      this.startGame();
+    });
   }
 
   startGame(){
+    clearInterval(this.timer);
+    this.flippedCards.set([]);
     const level = this.gameState.getCurrentLevelConfig();
 
     const deck = [...level.values, ...level.values]
@@ -49,7 +56,7 @@ export class StartComponent {
       }else{
         clearInterval(this.timer);
         this.timerRunning.set(false);
-        alert("¡Fracaso!");
+        this.nav.openModal('lose');
       }
     }, 1000)
   }
@@ -78,19 +85,11 @@ export class StartComponent {
       if (this.cards().every(c => c.matched)) {
         clearInterval(this.timer);
         this.gameState.completeLevel();
-        alert('🎉 Nivel completado');
+        this.nav.openModal('win');
       }
     } else {
       a.flipped = b.flipped = false;
       this.flippedCards.set([]);
-    }
-  }
-
-  checkWin() {
-    if (this.cards().every(card => card.matched)) {
-      clearInterval(this.timer);
-      this.gameState.completeLevel();
-      alert("¡Nivel completado!");
     }
   }
 

@@ -25,3 +25,10 @@ button {
 button:hover {
   background: #1565c0;
 }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}

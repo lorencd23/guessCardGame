@@ -1,0 +1,20 @@
+.panel{
+    position: fixed;
+    display: grid;
+    place-items: center;
+    z-index: 11;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80vh;
+    height: 40vh;
+    background-color: #385A7C;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

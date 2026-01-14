@@ -31,3 +31,15 @@
 @if(nav.screen() === 'privacy'){
   <app-privacy></app-privacy>
 }
+
+@if(nav.modal()){
+  <div class="overlay"></div>
+}
+
+@if(nav.modal() === 'win'){
+  <app-win-component></app-win-component>
+}
+
+@if(nav.modal() === 'lose'){
+  <app-lose-component></app-lose-component>
+}
