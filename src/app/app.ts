@@ -6,6 +6,7 @@ import { StartComponent } from './components/start/start';
 import { AppNavigationService } from './services/app-navigation-service';
 import { WinComponent } from './components/win-component/win-component';
 import { LoseComponent } from './components/lose-component/lose-component';
+import { GameStateService } from './services/game-state-service';
 
 type Screen = 'menu' | 'levels' | 'game' | 'options' | 'privacy';
 
@@ -20,7 +21,7 @@ export class App {
   
   screen = signal<Screen>('menu');
 
-  constructor(public nav: AppNavigationService) {}
+  constructor(public nav: AppNavigationService, private game: GameStateService) {}
 
   openLevelSelector(){
     this.nav.goTo('levels');

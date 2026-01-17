@@ -26,6 +26,10 @@ export class StartComponent {
     });
   }
 
+  ngOnDestroy(){
+    clearInterval(this.timer);
+  }
+
   startGame(){
     clearInterval(this.timer);
     this.flippedCards.set([]);
@@ -92,5 +96,4 @@ export class StartComponent {
       this.flippedCards.set([]);
     }
   }
-
 }

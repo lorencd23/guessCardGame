@@ -12,13 +12,13 @@ export class GameStateService {
   levels: LevelConfig[] = [
     {
       id: 1,
-      time: 60,
+      time: 30,
       values: ['🍎', '🍌', '🍇', '🍓', '🍒', '🍉'], // 6 parejas
       completed: false,
     },
     {
       id: 2,
-      time: 50,
+      time: 40,
       values: ['🍎', '🍌', '🍇', '🍓', '🍒', '🍉'], // mismo número de cartas pero menos tiempo
       completed: false,
     },
@@ -36,7 +36,7 @@ export class GameStateService {
     },
     {
       id: 5,
-      time: 45,
+      time: 55,
       values: ['🍎', '🍌', '🍇', '🍓', '🍒', '🍉', '🥝', '🍍', '🍑', '🥥', '🥑'], // aún más
       completed: false,
     }
