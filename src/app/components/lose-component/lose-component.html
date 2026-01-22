@@ -1,7 +1,9 @@
 <div class="panel">
-    <h1>⏰ Tiempo agotado</h1>
+    <h1>Tiempo agotado</h1>
 
-    <button (click)="retry()"><span class="material-symbols-outlined">forward_circle</span></button>
-    <button (click)="levels()"><span class="material-symbols-outlined">menu</span></button> <!--menu es el nombre del material icon, realmente es niveles -->
-    <button (click)="menu()"><span class="material-symbols-outlined">home</span></button>
+    <div class="buttons-container">
+        <button (click)="retry()"><span class="span">Reintentar</span><span class="material-symbols-outlined">forward_circle</span></button>
+        <button (click)="levels()"><span class="span">Selector de niveles</span><span class="material-symbols-outlined">menu</span></button> <!--menu es el nombre del material icon, realmente es niveles -->
+        <button (click)="menu()"><span class="span">Menú</span><span class="material-symbols-outlined">home</span></button>
+    </div>
 </div>

@@ -14,31 +14,31 @@ export class GameStateService {
       id: 1,
       time: 30,
       values: ['🍎', '🍌', '🍇', '🍓', '🍒', '🍉'], // 6 parejas
-      completed: false,
+      completed: false
     },
     {
       id: 2,
       time: 40,
       values: ['🍎', '🍌', '🍇', '🍓', '🍒', '🍉'], // mismo número de cartas pero menos tiempo
-      completed: false,
+      completed: false
     },
     {
       id: 3,
       time: 50,
       values: ['🍎', '🍌', '🍇', '🍓', '🍒', '🍉', '🥝', '🍍'], // más cartas
-      completed: false, 
+      completed: false
     },
     {
       id: 4,
       time: 50,
       values: ['🍎', '🍌', '🍇', '🍓', '🍒', '🍉', '🥝', '🍍', '🍑', '🥥'], // aún más
-      completed: false,
+      completed: false
     },
     {
       id: 5,
       time: 55,
       values: ['🍎', '🍌', '🍇', '🍓', '🍒', '🍉', '🥝', '🍍', '🍑', '🥥', '🥑'], // aún más
-      completed: false,
+      completed: false
     }
   ];
 
@@ -47,7 +47,7 @@ export class GameStateService {
       localStorage.setItem('gameState', JSON.stringify({
         currentLevel: this.currentLevel(),
         maxUnlockedLevel: this.maxUnlockedLevel(),
-        levels: this.levels
+        levels: this.levels,
       }));
     });
 
@@ -92,6 +92,13 @@ export class GameStateService {
   }
 
   public retryGame(): void {
+    this.gameVersion.update(v => v + 1);
+  }
+
+  public newGame(): void {
+    this.currentLevel.set(0);
+    this.maxUnlockedLevel.set(0);
+    this.levels.forEach(level => level.completed = false);
     this.gameVersion.update(v => v + 1);
   }
 }

@@ -3,16 +3,16 @@
     <h1>🧠 Juego de Memoria</h1>
 
     <div class="stats">
-      <button (click)="openLevelSelector()">Play</button>
-      <button (click)="openOptions()">Options</button>
-      <button (click)="openPrivacy()">Privacy&Policies</button>
+      <button (click)="openLevelSelector()"><span class="span">Jugar</span></button>
+      <button (click)="openOptions()"><span class="span">Opciones</span></button>
+      <button (click)="openPrivacy()"><span class="span">Privacidad y Políticas</span></button>
     </div>
   </div>
 }
 
 @if(nav.screen() !== 'menu'){
   <div>
-    <button (click)="back()">⬅️ Back</button>
+    <button (click)="back()"><span class="material-symbols-outlined">expand_circle_right</span><span class="span">Back</span></button>
   </div>
 }
 
@@ -42,4 +42,8 @@
 
 @if(nav.modal() === 'lose'){
   <app-lose-component></app-lose-component>
+}
+
+@if(nav.modal() === 'finished'){
+  <app-finished-component></app-finished-component>
 }

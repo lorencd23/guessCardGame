@@ -6,7 +6,7 @@
             [class.locked]="i > gameState.maxUnlockedLevel()"
             [class.completed]="level.completed"
             (click)="select(i)">
-            Nivel {{ level.id }}
+            <span>Nivel {{ level.id }}</span>
         </button>
     }
 </div>

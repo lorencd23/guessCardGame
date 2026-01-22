@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 export type Screen = 'menu' | 'levels' | 'game' | 'options' | 'privacy';
-export type Modal = null | 'win' | 'lose';
+export type Modal = null | 'win' | 'lose' | 'finished';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,11 @@
-h1, h2 {
+h1 {
   text-align: center;
   margin-bottom: 1rem;
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F2E205;
+  text-shadow: #e76f3d 2px 2px 0px,#e76f3d 3px 3px 0px, #e76f3d 4px 4px 0px,#e76f3d 5px 5px 0px;
 }
 .stats {
   display: flex;
@@ -14,16 +19,21 @@ h1, h2 {
   gap: 10px;
   justify-content: center;
 }
-button {
-  background: #1976d2;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+button{
+    background-color: #F2E205;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* text-shadow: #e76f3d 1px 1px 0px, #385A7C 2px 2px 0px,#e76f3d 3px 3px 0px ; */
+    box-shadow: #e76f3d 1px 1px 0px, #385A7C 4px 4px 0px, #e76f3d 5px 5px 0px ;
 }
 button:hover {
-  background: #1565c0;
+    background-color: #d4c204;
+    cursor: pointer;
 }
 
 .overlay {
@@ -31,4 +41,19 @@ button:hover {
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 10;
+}
+
+.span {
+  font-family: "Chicle", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #385A7C;
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 0.6vh;
+    color: #385A7C;
+    font-weight: 600;
+    rotate: 180deg;
 }

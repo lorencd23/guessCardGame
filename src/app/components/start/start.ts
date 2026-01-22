@@ -89,7 +89,11 @@ export class StartComponent {
       if (this.cards().every(c => c.matched)) {
         clearInterval(this.timer);
         this.gameState.completeLevel();
-        this.nav.openModal('win');
+        if(this.gameState.currentLevel()+1 === this.gameState.levels.length){
+          this.nav.openModal('finished');
+        }else{
+          this.nav.openModal('win');
+        }
       }
     } else {
       a.flipped = b.flipped = false;

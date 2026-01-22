@@ -3,26 +3,75 @@
     display: grid;
     place-items: center;
     z-index: 11;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 10px double #F2E205;
+    border-radius: 50px;
     width: 80vh;
     height: 40vh;
-    background-color: #385A7C;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #385A7C;
+    
 }
 
 h1{
     font-family: "Monoton", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: #F2E205;
+    text-shadow: #e76f3d 2px 2px 0px,#e76f3d 3px 3px 0px, #e76f3d 4px 4px 0px,#e76f3d 5px 5px 0px;
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    vertical-align: middle;
+    margin-left: 1vh;
+    color: #385A7C;
+    font-weight: 600;
+}
+
+button{
+    background-color: #F2E205;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* text-shadow: #e76f3d 1px 1px 0px, #385A7C 2px 2px 0px,#e76f3d 3px 3px 0px ; */
+    box-shadow: #e76f3d 1px 1px 0px, #385A7C 4px 4px 0px, #e76f3d 5px 5px 0px ;
+}
+button:hover {
+    background-color: #d4c204;
+    cursor: pointer;
+}
+
+.span {
+    font-family: "Chicle", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #385A7C;
+}
+
+.spanPuntos {
+    font-family: "Chicle", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vh;
+    color: #F2E205;
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntos-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }

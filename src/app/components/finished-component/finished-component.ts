@@ -3,16 +3,17 @@ import { AppNavigationService } from '../../services/app-navigation-service';
 import { GameStateService } from '../../services/game-state-service';
 
 @Component({
-  selector: 'app-win-component',
+  selector: 'app-finished-component',
   imports: [],
-  templateUrl: './win-component.html',
-  styleUrl: './win-component.css',
+  templateUrl: './finished-component.html',
+  styleUrl: './finished-component.css',
 })
-export class WinComponent {
+export class FinishedComponent {
+  
   constructor(public nav: AppNavigationService, public game: GameStateService) {}
 
-  next() {
-    this.game.nextLevel();
+  newGame() {
+    this.game.newGame();
     this.nav.closeModal();
   }
 
@@ -23,5 +24,4 @@ export class WinComponent {
   menu() {
     this.nav.goTo('menu');
   }
-  
 }

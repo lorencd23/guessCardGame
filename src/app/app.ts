@@ -6,6 +6,7 @@ import { StartComponent } from './components/start/start';
 import { AppNavigationService } from './services/app-navigation-service';
 import { WinComponent } from './components/win-component/win-component';
 import { LoseComponent } from './components/lose-component/lose-component';
+import { FinishedComponent } from './components/finished-component/finished-component';
 import { GameStateService } from './services/game-state-service';
 
 type Screen = 'menu' | 'levels' | 'game' | 'options' | 'privacy';
@@ -13,7 +14,7 @@ type Screen = 'menu' | 'levels' | 'game' | 'options' | 'privacy';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [LevelSelector, StartComponent, Options, Privacy, WinComponent, LoseComponent],
+  imports: [LevelSelector, StartComponent, Options, Privacy, WinComponent, LoseComponent, FinishedComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

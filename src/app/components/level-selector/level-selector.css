@@ -1,6 +1,11 @@
 h2{
     text-align: center;
     margin-bottom: 1rem;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F2E205;
+    text-shadow: #e76f3d 2px 2px 0px,#e76f3d 3px 3px 0px, #e76f3d 4px 4px 0px,#e76f3d 5px 5px 0px;
 }
 
 .levels {
@@ -33,4 +38,23 @@ h2{
 
 .completed{
     background: #40b830;
+}
+
+button{
+    background-color: #F2E205;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: #e76f3d 1px 1px 0px, #385A7C 4px 4px 0px, #e76f3d 5px 5px 0px ;
+}
+
+span{
+    font-family: "Chicle", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #385A7C;
 }
